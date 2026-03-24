@@ -142,7 +142,7 @@ export const services: Service[] = [
       "Guest network isolation check",
       "Detailed security report with action items",
     ],
-    price: "From $149",
+    price: "From GH₵149",
     duration: "3–5 hours",
   },
   {
