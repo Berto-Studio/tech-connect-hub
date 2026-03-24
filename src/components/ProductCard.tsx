@@ -42,7 +42,7 @@ const ProductCard = ({ product }: { product: Product }) => {
           {product.description}
         </p>
         <div className="flex items-center justify-between">
-          <span className="text-xl font-bold text-foreground">${product.price.toFixed(2)}</span>
+          <span className="text-xl font-bold text-foreground">GH₵{product.price.toFixed(2)}</span>
           <Button size="sm" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-4 h-4 mr-1" />

@@ -196,7 +196,7 @@ export const services: Service[] = [
       "Motion detection & alert configuration",
       "Night vision & coverage optimization",
     ],
-    price: "From $199",
+    price: "From GH₵199",
     duration: "3–6 hours",
   },
 ];
