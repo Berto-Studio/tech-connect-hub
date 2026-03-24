@@ -124,7 +124,7 @@ export const services: Service[] = [
       "Band steering & QoS setup",
       "Before/after speed comparison report",
     ],
-    price: "From $79",
+    price: "From GH₵79",
     duration: "1–3 hours",
   },
   {
