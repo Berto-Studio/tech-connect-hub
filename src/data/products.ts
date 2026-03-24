@@ -106,7 +106,7 @@ export const services: Service[] = [
       "Speed testing & performance verification",
       "Post-install documentation & support",
     ],
-    price: "From $99",
+    price: "From GH₵99",
     duration: "2–4 hours",
   },
   {
@@ -124,7 +124,7 @@ export const services: Service[] = [
       "Band steering & QoS setup",
       "Before/after speed comparison report",
     ],
-    price: "From $79",
+    price: "From GH₵79",
     duration: "1–3 hours",
   },
   {
@@ -142,7 +142,7 @@ export const services: Service[] = [
       "Guest network isolation check",
       "Detailed security report with action items",
     ],
-    price: "From $149",
+    price: "From GH₵149",
     duration: "3–5 hours",
   },
   {
@@ -160,7 +160,7 @@ export const services: Service[] = [
       "Monthly health check reports",
       "Equipment replacement assistance",
     ],
-    price: "From $49/session",
+    price: "From GH₵49/session",
     duration: "Varies",
   },
   {
@@ -178,7 +178,7 @@ export const services: Service[] = [
       "Documentation & network diagrams",
       "Staff training on network management",
     ],
-    price: "From $299",
+    price: "From GH₵299",
     duration: "1–2 days",
   },
   {
@@ -196,7 +196,7 @@ export const services: Service[] = [
       "Motion detection & alert configuration",
       "Night vision & coverage optimization",
     ],
-    price: "From $199",
+    price: "From GH₵199",
     duration: "3–6 hours",
   },
 ];

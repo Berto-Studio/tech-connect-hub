@@ -6,7 +6,7 @@ import { WHATSAPP_NUMBER } from "@/data/products";
 
 const ProductCard = ({ product }: { product: Product }) => {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    `Hi! I'd like to order:\n\n📦 ${product.name}\n💰 $${product.price.toFixed(2)}\n\nPlease confirm availability.`
+    `Hi! I'd like to order:\n\n📦 ${product.name}\n💰 GH₵${product.price.toFixed(2)}\n\nPlease confirm availability.`
   )}`;
 
   return (
@@ -42,7 +42,7 @@ const ProductCard = ({ product }: { product: Product }) => {
           {product.description}
         </p>
         <div className="flex items-center justify-between">
-          <span className="text-xl font-bold text-foreground">${product.price.toFixed(2)}</span>
+          <span className="text-xl font-bold text-foreground">GH₵{product.price.toFixed(2)}</span>
           <Button size="sm" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-4 h-4 mr-1" />
