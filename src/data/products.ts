@@ -106,7 +106,7 @@ export const services: Service[] = [
       "Speed testing & performance verification",
       "Post-install documentation & support",
     ],
-    price: "From $99",
+    price: "From GH₵99",
     duration: "2–4 hours",
   },
   {
