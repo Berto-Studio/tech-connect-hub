@@ -7,16 +7,8 @@ const ProductsSection = () => {
   const filtered = active === "All" ? products : products.filter((p) => p.category === active);
 
   return (
-    <section id="products" className="py-24 bg-background">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-3">
-            Our Products
-          </h2>
-          <p className="text-muted-foreground max-w-md mx-auto">
-            Top-quality networking gear to keep your home or business running at full speed.
-          </p>
-        </div>
 
         {/* Category filters */}
         <div className="flex flex-wrap justify-center gap-2 mb-10">
