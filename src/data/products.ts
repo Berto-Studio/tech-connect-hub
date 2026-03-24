@@ -178,7 +178,7 @@ export const services: Service[] = [
       "Documentation & network diagrams",
       "Staff training on network management",
     ],
-    price: "From $299",
+    price: "From GH₵299",
     duration: "1–2 days",
   },
   {
