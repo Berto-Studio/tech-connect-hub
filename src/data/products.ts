@@ -12,7 +12,11 @@ export interface Service {
   id: string;
   title: string;
   description: string;
+  shortDescription: string;
   icon: string;
+  features: string[];
+  price: string;
+  duration: string;
 }
 
 export const products: Product[] = [
@@ -90,26 +94,110 @@ export const services: Service[] = [
   {
     id: "s1",
     title: "Network Installation",
-    description: "Professional setup of routers, modems, and network infrastructure for homes and businesses.",
+    shortDescription: "Professional setup of routers, modems, and network infrastructure.",
+    description:
+      "Our certified technicians will install and configure your entire network from scratch. Whether it's a home setup with a single router or a multi-floor business with structured cabling, we handle the full end-to-end process — from planning the layout to running cables, mounting access points, and configuring your devices for optimal performance.",
     icon: "Wrench",
+    features: [
+      "Site assessment & network design",
+      "Router & modem installation and configuration",
+      "Structured cabling (Cat5e/Cat6)",
+      "Access point mounting & setup",
+      "Speed testing & performance verification",
+      "Post-install documentation & support",
+    ],
+    price: "From $99",
+    duration: "2–4 hours",
   },
   {
     id: "s2",
     title: "WiFi Optimization",
-    description: "Site survey and optimization to eliminate dead zones and maximize coverage and speed.",
+    shortDescription: "Eliminate dead zones and maximize coverage and speed.",
+    description:
+      "Struggling with slow WiFi or dead zones? Our WiFi optimization service starts with a thorough site survey using professional heatmapping tools. We analyze signal strength, interference sources, and device density to create a tailored plan. Then we reposition equipment, adjust channels, upgrade firmware, and fine-tune settings to deliver the fastest, most reliable coverage possible.",
     icon: "Wifi",
+    features: [
+      "Professional WiFi heatmap survey",
+      "Interference & channel analysis",
+      "Equipment repositioning recommendations",
+      "Firmware updates & configuration tuning",
+      "Band steering & QoS setup",
+      "Before/after speed comparison report",
+    ],
+    price: "From $79",
+    duration: "1–3 hours",
   },
   {
     id: "s3",
     title: "Network Security Audit",
-    description: "Comprehensive security assessment to protect your network from vulnerabilities and threats.",
+    shortDescription: "Protect your network from vulnerabilities and threats.",
+    description:
+      "In today's connected world, network security isn't optional. Our comprehensive audit examines your entire network infrastructure — from firewall rules and encryption protocols to open ports and default credentials. We identify vulnerabilities, test for common attack vectors, and provide a detailed report with prioritized recommendations to harden your network against threats.",
     icon: "Shield",
+    features: [
+      "Firewall & router configuration review",
+      "Encryption protocol assessment (WPA3, VPN)",
+      "Open port & vulnerability scanning",
+      "Default credential & password audit",
+      "Guest network isolation check",
+      "Detailed security report with action items",
+    ],
+    price: "From $149",
+    duration: "3–5 hours",
   },
   {
     id: "s4",
     title: "Technical Support",
-    description: "On-call troubleshooting and maintenance for all networking equipment we sell.",
+    shortDescription: "On-call troubleshooting and maintenance for your equipment.",
+    description:
+      "Get peace of mind with our ongoing technical support plans. Whether you need help resolving a connectivity issue, updating firmware, or diagnosing intermittent problems, our team is just a call or WhatsApp message away. We offer both one-time troubleshooting sessions and monthly retainer plans for businesses that need guaranteed response times.",
     icon: "Headphones",
+    features: [
+      "Remote & on-site troubleshooting",
+      "Firmware & software updates",
+      "Performance monitoring setup",
+      "Priority response within 2 hours (retainer)",
+      "Monthly health check reports",
+      "Equipment replacement assistance",
+    ],
+    price: "From $49/session",
+    duration: "Varies",
+  },
+  {
+    id: "s5",
+    title: "Business Network Design",
+    shortDescription: "Custom enterprise-grade network architecture for growing businesses.",
+    description:
+      "Planning a new office or expanding your business? We design scalable, enterprise-grade network architectures tailored to your specific needs. From VLAN segmentation and redundant uplinks to managed switches and centralized WiFi controllers, we build networks that grow with you — reliable, secure, and easy to manage.",
+    icon: "Building",
+    features: [
+      "Custom network topology design",
+      "VLAN segmentation & traffic management",
+      "Redundancy & failover planning",
+      "Managed switch & controller setup",
+      "Documentation & network diagrams",
+      "Staff training on network management",
+    ],
+    price: "From $299",
+    duration: "1–2 days",
+  },
+  {
+    id: "s6",
+    title: "CCTV & IP Camera Setup",
+    shortDescription: "Surveillance system installation integrated with your network.",
+    description:
+      "Secure your premises with a professionally installed CCTV and IP camera system. We integrate cameras directly into your existing network, configure remote viewing on your phone, set up motion alerts, and ensure recordings are stored securely — whether on a local NVR or cloud storage.",
+    icon: "Camera",
+    features: [
+      "IP camera selection & procurement",
+      "PoE-powered camera installation",
+      "NVR/cloud storage configuration",
+      "Remote mobile viewing setup",
+      "Motion detection & alert configuration",
+      "Night vision & coverage optimization",
+    ],
+    price: "From $199",
+    duration: "3–6 hours",
   },
 ];
 
