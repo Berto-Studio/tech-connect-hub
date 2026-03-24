@@ -160,7 +160,7 @@ export const services: Service[] = [
       "Monthly health check reports",
       "Equipment replacement assistance",
     ],
-    price: "From $49/session",
+    price: "From GH₵49/session",
     duration: "Varies",
   },
   {
