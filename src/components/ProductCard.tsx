@@ -6,7 +6,7 @@ import { WHATSAPP_NUMBER } from "@/data/products";
 
 const ProductCard = ({ product }: { product: Product }) => {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    `Hi! I'd like to order:\n\n📦 ${product.name}\n💰 $${product.price.toFixed(2)}\n\nPlease confirm availability.`
+    `Hi! I'd like to order:\n\n📦 ${product.name}\n💰 GH₵${product.price.toFixed(2)}\n\nPlease confirm availability.`
   )}`;
 
   return (
