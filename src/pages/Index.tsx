@@ -30,7 +30,7 @@ const Index = () => (
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="max-w-2xl"
+          className="max-w-2xl mx-auto text-center"
         >
           <span className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-widest uppercase rounded-full bg-primary/20 text-primary border border-primary/30">
             Networking Solutions
