@@ -52,7 +52,7 @@ const Index = () => (
           </div>
 
           {/* Stats row */}
-          <div className="flex gap-8 mt-12 pt-8 border-t border-dark-foreground/10">
+          <div className="flex gap-8 mt-12 pt-8 border-t border-dark-foreground/10 justify-center">
             {[
               { value: "500+", label: "Products Sold" },
               { value: "50+", label: "Happy Clients" },
