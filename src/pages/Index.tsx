@@ -30,7 +30,7 @@ const Index = () => (
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="max-w-2xl"
+          className="max-w-2xl mx-auto text-center"
         >
           <span className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-widest uppercase rounded-full bg-primary/20 text-primary border border-primary/30">
             Networking Solutions
@@ -39,20 +39,20 @@ const Index = () => (
             Power Your <br />
             <span className="text-primary">Connectivity</span>
           </h1>
-          <p className="text-lg text-dark-foreground/70 mb-8 max-w-lg">
+          <p className="text-lg text-dark-foreground/70 mb-8 max-w-lg mx-auto">
             Premium routers, modems, and networking equipment — plus expert installation and support services.
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 justify-center">
             <Button size="lg" asChild>
               <Link to="/products">Browse Products</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-dark-foreground/30 text-dark-foreground hover:bg-dark-foreground/10" asChild>
+            <Button size="lg" variant="outline" className="border-dark-foreground/30 text-dark hover:bg-dark-foreground/10 bg-dark-foreground" asChild>
               <Link to="/services">Our Services</Link>
             </Button>
           </div>
 
           {/* Stats row */}
-          <div className="flex gap-8 mt-12 pt-8 border-t border-dark-foreground/10">
+          <div className="flex gap-8 mt-12 pt-8 border-t border-dark-foreground/10 justify-center">
             {[
               { value: "500+", label: "Products Sold" },
               { value: "50+", label: "Happy Clients" },
