@@ -19,66 +19,52 @@ const Index = () => (
 
     {/* Hero */}
     <section className="relative min-h-[90vh] flex items-center bg-dark overflow-hidden">
-      <div className="container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left — Text */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <span className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-widest uppercase rounded-full bg-primary/20 text-primary border border-primary/30">
-              Networking Solutions
-            </span>
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-dark-foreground mb-6">
-              Power Your <br />
-              <span className="text-primary">Connectivity</span>
-            </h1>
-            <p className="text-lg text-dark-foreground/70 mb-8 max-w-lg">
-              Premium routers, modems, and networking equipment — plus expert installation and support services.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Button size="lg" asChild>
-                <Link to="/products">Browse Products</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="border-dark-foreground/30 text-dark-foreground hover:bg-dark-foreground/10" asChild>
-                <Link to="/services">Our Services</Link>
-              </Button>
-            </div>
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img src={heroImg} alt="" className="w-full h-full object-cover opacity-40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark via-dark/80 to-transparent" />
+      </div>
 
-            {/* Stats row */}
-            <div className="flex gap-8 mt-12 pt-8 border-t border-dark-foreground/10">
-              {[
-                { value: "500+", label: "Products Sold" },
-                { value: "50+", label: "Happy Clients" },
-                { value: "24/7", label: "Support" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <p className="font-display text-2xl font-bold text-primary">{stat.value}</p>
-                  <p className="text-xs text-dark-foreground/50 mt-1">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
+      <div className="container relative z-10 mx-auto px-4 py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="max-w-2xl"
+        >
+          <span className="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-widest uppercase rounded-full bg-primary/20 text-primary border border-primary/30">
+            Networking Solutions
+          </span>
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-dark-foreground mb-6">
+            Power Your <br />
+            <span className="text-primary">Connectivity</span>
+          </h1>
+          <p className="text-lg text-dark-foreground/70 mb-8 max-w-lg">
+            Premium routers, modems, and networking equipment — plus expert installation and support services.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <Button size="lg" asChild>
+              <Link to="/products">Browse Products</Link>
+            </Button>
+            <Button size="lg" variant="outline" className="border-dark-foreground/30 text-dark-foreground hover:bg-dark-foreground/10" asChild>
+              <Link to="/services">Our Services</Link>
+            </Button>
+          </div>
 
-          {/* Right — Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative hidden lg:block"
-          >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 border border-dark-foreground/10">
-              <img src={heroImg} alt="Networking equipment" className="w-full h-[520px] object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent" />
-            </div>
-            {/* Floating badge */}
-            <div className="absolute -bottom-4 -left-4 bg-primary text-primary-foreground rounded-xl px-5 py-3 shadow-lg">
-              <p className="font-display font-bold text-lg">Menz Tech</p>
-              <p className="text-xs opacity-80">Trusted in Ghana</p>
-            </div>
-          </motion.div>
-        </div>
+          {/* Stats row */}
+          <div className="flex gap-8 mt-12 pt-8 border-t border-dark-foreground/10">
+            {[
+              { value: "500+", label: "Products Sold" },
+              { value: "50+", label: "Happy Clients" },
+              { value: "24/7", label: "Support" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="font-display text-2xl font-bold text-primary">{stat.value}</p>
+                <p className="text-xs text-dark-foreground/50 mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
 
