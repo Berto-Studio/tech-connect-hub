@@ -42,7 +42,7 @@ const Index = () => (
           <p className="text-lg text-dark-foreground/70 mb-8 max-w-lg mx-auto">
             Premium routers, modems, and networking equipment — plus expert installation and support services.
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 justify-center">
             <Button size="lg" asChild>
               <Link to="/products">Browse Products</Link>
             </Button>
