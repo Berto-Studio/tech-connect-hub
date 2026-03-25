@@ -46,7 +46,7 @@ const Index = () => (
             <Button size="lg" asChild>
               <Link to="/products">Browse Products</Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-dark-foreground/30 text-dark-foreground hover:bg-dark-foreground/10" asChild>
+            <Button size="lg" variant="outline" className="border-dark-foreground/30 text-dark hover:bg-dark-foreground/10 bg-dark-foreground" asChild>
               <Link to="/services">Our Services</Link>
             </Button>
           </div>
