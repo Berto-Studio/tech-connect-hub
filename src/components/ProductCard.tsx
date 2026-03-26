@@ -4,7 +4,12 @@ import { Button } from "@/components/ui/button";
 import type { Product } from "@/data/products";
 import { WHATSAPP_NUMBER } from "@/data/products";
 
-const ProductCard = ({ product }: { product: Product }) => {
+interface Props {
+  product: Product;
+  onClick?: () => void;
+}
+
+const ProductCard = ({ product, onClick }: Props) => {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     `Hi! I'd like to order:\n\n📦 ${product.name}\n💰 GH₵${product.price.toFixed(2)}\n\nPlease confirm availability.`
   )}`;
@@ -15,7 +20,8 @@ const ProductCard = ({ product }: { product: Product }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.4 }}
-      className="group relative rounded-xl bg-card border overflow-hidden hover:shadow-lg transition-shadow"
+      onClick={onClick}
+      className="group relative rounded-xl bg-card border overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
     >
       {product.badge && (
         <span className="absolute top-3 left-3 z-10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide rounded-full bg-primary text-primary-foreground">
@@ -43,7 +49,12 @@ const ProductCard = ({ product }: { product: Product }) => {
         </p>
         <div className="flex items-center justify-between">
           <span className="text-xl font-bold text-foreground">GH₵{product.price.toFixed(2)}</span>
-          <Button size="sm" className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground" asChild>
+          <Button
+            size="sm"
+            className="bg-whatsapp hover:bg-whatsapp/90 text-whatsapp-foreground"
+            asChild
+            onClick={(e: React.MouseEvent) => e.stopPropagation()}
+          >
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-4 h-4 mr-1" />
               Order
