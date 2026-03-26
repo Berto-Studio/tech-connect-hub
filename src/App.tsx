@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import ProductsPage from "./pages/ProductsPage.tsx";
 import ServicesPage from "./pages/ServicesPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
+import ProjectsPage from "./pages/ProjectsPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
