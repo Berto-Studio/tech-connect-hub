@@ -7,6 +7,8 @@ import serviceDatacenter from "@/assets/service-datacenter.jpg";
 import serviceGate from "@/assets/service-gate.jpg";
 import serviceSolar from "@/assets/service-solar.jpg";
 import serviceFencing from "@/assets/service-fencing.jpg";
+import serviceAccess from "@/assets/service-access.jpg";
+import serviceElectrical from "@/assets/service-electrical.jpg";
 
 export interface Project {
   id: string;
