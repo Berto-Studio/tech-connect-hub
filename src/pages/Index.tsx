@@ -11,13 +11,13 @@ import team1 from "@/assets/team-1.jpg";
 import team2 from "@/assets/team-2.jpg";
 import team3 from "@/assets/team-3.jpg";
 import team4 from "@/assets/team-4.jpg";
-import { products } from "@/data/products";
-import { allServices } from "@/data/services";
 import { projects, type Project } from "@/data/projects";
-import ProductCard from "@/components/ProductCard";
-import ProductDetailModal from "@/components/ProductDetailModal";
 import ProjectModal from "@/components/ProjectModal";
-import type { Product } from "@/data/products";
+import StoreProductCard from "@/components/store/StoreProductCard";
+import StoreProductModal from "@/components/store/StoreProductModal";
+import StoreServiceCard from "@/components/store/StoreServiceCard";
+import StoreServiceModal from "@/components/store/StoreServiceModal";
+import { useFeaturedProducts, useFeaturedServices, type DbProduct, type DbService } from "@/hooks/useCatalog";
 
 const processSteps = [
   { icon: MessageSquare, title: "Consultation", desc: "We discuss your needs, budget, and goals to understand the best solution." },
