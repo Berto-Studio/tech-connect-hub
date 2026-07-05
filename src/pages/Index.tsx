@@ -11,13 +11,13 @@ import team1 from "@/assets/team-1.jpg";
 import team2 from "@/assets/team-2.jpg";
 import team3 from "@/assets/team-3.jpg";
 import team4 from "@/assets/team-4.jpg";
-import { products } from "@/data/products";
-import { allServices } from "@/data/services";
 import { projects, type Project } from "@/data/projects";
-import ProductCard from "@/components/ProductCard";
-import ProductDetailModal from "@/components/ProductDetailModal";
 import ProjectModal from "@/components/ProjectModal";
-import type { Product } from "@/data/products";
+import StoreProductCard from "@/components/store/StoreProductCard";
+import StoreProductModal from "@/components/store/StoreProductModal";
+import StoreServiceCard from "@/components/store/StoreServiceCard";
+import StoreServiceModal from "@/components/store/StoreServiceModal";
+import { useFeaturedProducts, useFeaturedServices, type DbProduct, type DbService } from "@/hooks/useCatalog";
 
 const processSteps = [
   { icon: MessageSquare, title: "Consultation", desc: "We discuss your needs, budget, and goals to understand the best solution." },
@@ -60,8 +60,11 @@ const fadeUp = {
 };
 
 const Index = () => {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<DbProduct | null>(null);
+  const [selectedService, setSelectedService] = useState<DbService | null>(null);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const { data: featuredProducts = [] } = useFeaturedProducts(4);
+  const { data: featuredServices = [] } = useFeaturedServices(6);
 
   return (
     <>
@@ -144,13 +147,15 @@ const Index = () => {
               <Link to="/products" className="gap-1">View All <ArrowRight className="w-4 h-4" /></Link>
             </Button>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.slice(0, 4).map((p) => (
-              <ProductCard key={p.id} product={p} onClick={() => setSelectedProduct(p)} />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {featuredProducts.map((p) => (
+              <StoreProductCard key={p.id} product={p} onClick={() => setSelectedProduct(p)} />
             ))}
           </div>
         </div>
       </section>
+
+
 
       {/* Featured Services */}
       <section className="py-24 bg-background">
@@ -165,20 +170,9 @@ const Index = () => {
               <Link to="/services" className="gap-1">View All <ArrowRight className="w-4 h-4" /></Link>
             </Button>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allServices.slice(0, 6).map((s) => (
-              <motion.div key={s.id} {...fadeUp} className="rounded-xl overflow-hidden border bg-card group hover:shadow-md transition-all">
-                <div className="overflow-hidden">
-                  <img src={s.image} alt={s.title} loading="lazy" width={768} height={512} className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-display font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{s.description}</p>
-                  <Button variant="outline" size="sm" asChild>
-                    <Link to="/services" className="gap-1">Learn More <ArrowRight className="w-3 h-3" /></Link>
-                  </Button>
-                </div>
-              </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {featuredServices.map((s) => (
+              <StoreServiceCard key={s.id} service={s} onClick={() => setSelectedService(s)} />
             ))}
           </div>
         </div>
@@ -345,7 +339,8 @@ const Index = () => {
         </div>
       </section>
 
-      <ProductDetailModal product={selectedProduct} open={!!selectedProduct} onOpenChange={(o) => !o && setSelectedProduct(null)} />
+      <StoreProductModal product={selectedProduct} open={!!selectedProduct} onOpenChange={(o) => !o && setSelectedProduct(null)} />
+      <StoreServiceModal service={selectedService} open={!!selectedService} onOpenChange={(o) => !o && setSelectedService(null)} />
       <ProjectModal project={selectedProject} open={!!selectedProject} onOpenChange={(o) => !o && setSelectedProject(null)} />
       <Footer />
     </>

@@ -30,14 +30,14 @@ const Footer = () => (
 
         {/* Quick Links */}
         <div>
-          <h4 className="font-display font-semibold text-dark-foreground mb-4">Quick Links</h4>
+          <h4 className="font-display font-semibold text-dark-foreground mb-4">Shop</h4>
           <ul className="space-y-2.5">
             {[
-              { label: "Home", to: "/" },
-              { label: "Products", to: "/products" },
+              { label: "All Products", to: "/products" },
               { label: "Services", to: "/services" },
               { label: "Projects", to: "/projects" },
-              { label: "Contact", to: "/contact" },
+              { label: "Your Cart", to: "/cart" },
+              { label: "Sign In / Register", to: "/auth" },
             ].map((link) => (
               <li key={link.to}>
                 <Link to={link.to} className="text-sm text-dark-foreground/50 hover:text-primary transition-colors">
