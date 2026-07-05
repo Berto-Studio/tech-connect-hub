@@ -24,10 +24,13 @@ const AdminServices = () => {
   const [form, setForm] = useState(emptyForm);
 
   const openNew = () => { setForm({ ...emptyForm }); setOpen(true); };
-  const openEdit = (s: DbService) => setForm({
-    id: s.id, title: s.title, slug: s.slug, description: s.description ?? "",
-    image_url: s.image_url ?? "", category_id: s.category_id ?? "", featured: s.featured,
-  }) || setOpen(true);
+  const openEdit = (s: DbService) => {
+    setForm({
+      id: s.id, title: s.title, slug: s.slug, description: s.description ?? "",
+      image_url: s.image_url ?? "", category_id: s.category_id ?? "", featured: s.featured,
+    });
+    setOpen(true);
+  };
 
   const save = async () => {
     if (!form.title.trim()) { toast.error("Title is required"); return; }
