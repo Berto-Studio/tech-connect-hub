@@ -170,20 +170,9 @@ const Index = () => {
               <Link to="/services" className="gap-1">View All <ArrowRight className="w-4 h-4" /></Link>
             </Button>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allServices.slice(0, 6).map((s) => (
-              <motion.div key={s.id} {...fadeUp} className="rounded-xl overflow-hidden border bg-card group hover:shadow-md transition-all">
-                <div className="overflow-hidden">
-                  <img src={s.image} alt={s.title} loading="lazy" width={768} height={512} className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-display font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{s.description}</p>
-                  <Button variant="outline" size="sm" asChild>
-                    <Link to="/services" className="gap-1">Learn More <ArrowRight className="w-3 h-3" /></Link>
-                  </Button>
-                </div>
-              </motion.div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {featuredServices.map((s) => (
+              <StoreServiceCard key={s.id} service={s} onClick={() => setSelectedService(s)} />
             ))}
           </div>
         </div>
@@ -350,7 +339,8 @@ const Index = () => {
         </div>
       </section>
 
-      <ProductDetailModal product={selectedProduct} open={!!selectedProduct} onOpenChange={(o) => !o && setSelectedProduct(null)} />
+      <StoreProductModal product={selectedProduct} open={!!selectedProduct} onOpenChange={(o) => !o && setSelectedProduct(null)} />
+      <StoreServiceModal service={selectedService} open={!!selectedService} onOpenChange={(o) => !o && setSelectedService(null)} />
       <ProjectModal project={selectedProject} open={!!selectedProject} onOpenChange={(o) => !o && setSelectedProject(null)} />
       <Footer />
     </>
