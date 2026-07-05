@@ -60,8 +60,11 @@ const fadeUp = {
 };
 
 const Index = () => {
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<DbProduct | null>(null);
+  const [selectedService, setSelectedService] = useState<DbService | null>(null);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const { data: featuredProducts = [] } = useFeaturedProducts(4);
+  const { data: featuredServices = [] } = useFeaturedServices(6);
 
   return (
     <>
@@ -144,13 +147,15 @@ const Index = () => {
               <Link to="/products" className="gap-1">View All <ArrowRight className="w-4 h-4" /></Link>
             </Button>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.slice(0, 4).map((p) => (
-              <ProductCard key={p.id} product={p} onClick={() => setSelectedProduct(p)} />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {featuredProducts.map((p) => (
+              <StoreProductCard key={p.id} product={p} onClick={() => setSelectedProduct(p)} />
             ))}
           </div>
         </div>
       </section>
+
+
 
       {/* Featured Services */}
       <section className="py-24 bg-background">
