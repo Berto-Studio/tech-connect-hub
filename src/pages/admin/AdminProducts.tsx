@@ -12,6 +12,7 @@ import {
 import {
   useProducts, useProductCategories, useUpsertProduct, useDeleteProduct, type DbProduct,
 } from "@/hooks/useCatalog";
+import ImageUploader from "@/components/admin/ImageUploader";
 import { toast } from "sonner";
 
 const emptyForm = {
@@ -139,7 +140,7 @@ const AdminProducts = () => {
                 <SelectContent>{cats.map((c) => <SelectItem key={c.id} value={c.id}>{c.name}</SelectItem>)}</SelectContent>
               </Select>
             </div>
-            <div><Label>Image URL</Label><Input value={form.image_url} onChange={(e) => setForm({ ...form, image_url: e.target.value })} /></div>
+            <ImageUploader label="Product image" value={form.image_url} onChange={(url) => setForm({ ...form, image_url: url })} />
             <div><Label>Badge (optional)</Label><Input value={form.badge} onChange={(e) => setForm({ ...form, badge: e.target.value })} placeholder="e.g. New" /></div>
             <label className="flex items-center gap-2 text-sm">
               <Checkbox checked={form.featured} onCheckedChange={(v) => setForm({ ...form, featured: !!v })} /> Featured on homepage
