@@ -10,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import {
   useServices, useServiceCategories, useUpsertService, useDeleteService, type DbService,
 } from "@/hooks/useCatalog";
+import ImageUploader from "@/components/admin/ImageUploader";
 import { toast } from "sonner";
 
 const emptyForm = { id: "", title: "", slug: "", description: "", image_url: "", category_id: "", featured: false };
@@ -101,7 +102,7 @@ const AdminServices = () => {
                 <SelectContent>{cats.map((c) => <SelectItem key={c.id} value={c.id}>{c.name}</SelectItem>)}</SelectContent>
               </Select>
             </div>
-            <div><Label>Image URL</Label><Input value={form.image_url} onChange={(e) => setForm({ ...form, image_url: e.target.value })} /></div>
+            <ImageUploader label="Service image" value={form.image_url} onChange={(url) => setForm({ ...form, image_url: url })} />
             <label className="flex items-center gap-2 text-sm">
               <Checkbox checked={form.featured} onCheckedChange={(v) => setForm({ ...form, featured: !!v })} /> Featured
             </label>
