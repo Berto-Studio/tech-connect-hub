@@ -75,13 +75,15 @@ const AdminProducts = () => {
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="font-display text-xl font-bold">Products</h2>
         <Button onClick={openNew}><Plus className="w-4 h-4 mr-1" /> Add product</Button>
       </div>
 
-      <div className="bg-background border rounded-lg overflow-hidden">
-        <table className="w-full text-sm">
+
+      <div className="bg-background border rounded-lg overflow-x-auto">
+        <table className="w-full text-sm min-w-[520px]">
+
           <thead className="bg-muted text-left">
             <tr>
               <th className="p-3">Product</th>
