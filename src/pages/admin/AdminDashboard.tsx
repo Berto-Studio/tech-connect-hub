@@ -21,7 +21,7 @@ const AdminDashboard = () => {
         <h2 className="font-display text-2xl font-bold text-foreground">Welcome back</h2>
         <p className="text-muted-foreground text-sm">Here's an overview of your catalog.</p>
       </div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         {stats.map((s) => (
           <Link key={s.label} to={s.to} className="bg-background border rounded-lg p-5 hover:shadow-md hover:border-primary/40 transition-all">
             <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${s.color}`}>

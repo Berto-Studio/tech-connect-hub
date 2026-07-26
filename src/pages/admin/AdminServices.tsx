@@ -54,13 +54,14 @@ const AdminServices = () => {
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="font-display text-xl font-bold">Services</h2>
         <Button onClick={openNew}><Plus className="w-4 h-4 mr-1" /> Add service</Button>
       </div>
 
-      <div className="bg-background border rounded-lg overflow-hidden">
-        <table className="w-full text-sm">
+      <div className="bg-background border rounded-lg overflow-x-auto">
+        <table className="w-full text-sm min-w-[480px]">
+
           <thead className="bg-muted text-left">
             <tr><th className="p-3">Service</th><th className="p-3 hidden md:table-cell">Category</th><th className="p-3">Featured</th><th className="p-3"></th></tr>
           </thead>

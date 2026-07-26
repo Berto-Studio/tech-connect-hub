@@ -44,16 +44,17 @@ const CategoryManager = ({ kind }: Props) => {
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="font-display text-xl font-bold">
           {kind === "product" ? "Product" : "Service"} Categories
         </h2>
         <Button onClick={openNew}><Plus className="w-4 h-4 mr-1" /> Add category</Button>
       </div>
 
-      <div className="bg-background border rounded-lg overflow-hidden">
-        <table className="w-full text-sm">
+      <div className="bg-background border rounded-lg overflow-x-auto">
+        <table className="w-full text-sm min-w-[380px]">
           <thead className="bg-muted text-left"><tr><th className="p-3">Name</th><th className="p-3">Slug</th><th className="p-3"></th></tr></thead>
+
           <tbody className="divide-y">
             {isLoading ? <tr><td colSpan={3} className="p-6 text-center text-muted-foreground">Loading…</td></tr> :
             cats.length === 0 ? <tr><td colSpan={3} className="p-6 text-center text-muted-foreground">No categories.</td></tr> :
