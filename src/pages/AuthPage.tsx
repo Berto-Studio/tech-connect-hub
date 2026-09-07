@@ -58,8 +58,8 @@ const AuthPage = () => {
         toast.success("Welcome back!");
       }
       nav("/", { replace: true });
-    } catch (err: any) {
-      toast.error(err.message ?? "Authentication failed");
+    } catch (err: unknown) {
+      toast.error(err instanceof Error ? err.message : "Authentication failed");
     } finally {
       setLoading(false);
     }
@@ -72,8 +72,8 @@ const AuthPage = () => {
         redirect_uri: `${window.location.origin}/auth`,
       });
       if (result.error) throw result.error;
-    } catch (err: any) {
-      toast.error(err.message ?? "Google sign-in failed");
+    } catch (err: unknown) {
+      toast.error(err instanceof Error ? err.message : "Google sign-in failed");
       setLoading(false);
     }
   };
