@@ -33,7 +33,7 @@ const ContactPage = () => (
                 {[
                   { icon: MapPin, label: "Visit Us", value: "123 Tech Street, Accra, Ghana", sub: "Mon–Fri, 8:00 AM – 6:00 PM" },
                   { icon: Phone, label: "Call Us", value: "+233 (0) 234 567 890", sub: "Available during business hours" },
-                  { icon: Mail, label: "Email Us", value: "info@menztech.com", sub: "We respond within 24 hours" },
+                  { icon: Mail, label: "Email Us", value: "info@metes.com", sub: "We respond within 24 hours" },
                   { icon: Clock, label: "Working Hours", value: "Monday – Friday: 8AM – 6PM", sub: "Saturday: 9AM – 2PM | Sunday: Closed" },
                 ].map(({ icon: Icon, label, value, sub }) => (
                   <div key={label} className="flex items-start gap-4 p-4 rounded-xl border bg-card">
