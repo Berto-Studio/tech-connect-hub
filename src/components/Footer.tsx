@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
-import logo from "@/assets/metes-logo.png";
+import logo from "@/assets/metes-logo-footer.png";
 import { WHATSAPP_NUMBER } from "@/data/products";
 
 const Footer = () => (
