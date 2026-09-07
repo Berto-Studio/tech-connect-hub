@@ -15,7 +15,7 @@ const ContactSection = () => (
           {[
             { icon: MapPin, label: "Visit Us", value: "123 Tech Street, City" },
             { icon: Phone, label: "Call Us", value: "+1 (234) 567-890" },
-            { icon: Mail, label: "Email Us", value: "info@menztech.com" },
+            { icon: Mail, label: "Email Us", value: "info@metes.com" },
           ].map(({ icon: Icon, label, value }) => (
             <div key={label} className="p-5 rounded-xl border border-dark-foreground/10 bg-dark-foreground/5">
               <Icon className="w-6 h-6 text-primary mx-auto mb-3" />

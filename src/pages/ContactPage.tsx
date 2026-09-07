@@ -33,7 +33,7 @@ const ContactPage = () => (
                 {[
                   { icon: MapPin, label: "Visit Us", value: "123 Tech Street, Accra, Ghana", sub: "Mon–Fri, 8:00 AM – 6:00 PM" },
                   { icon: Phone, label: "Call Us", value: "+233 (0) 234 567 890", sub: "Available during business hours" },
-                  { icon: Mail, label: "Email Us", value: "info@menztech.com", sub: "We respond within 24 hours" },
+                  { icon: Mail, label: "Email Us", value: "info@metes.com", sub: "We respond within 24 hours" },
                   { icon: Clock, label: "Working Hours", value: "Monday – Friday: 8AM – 6PM", sub: "Saturday: 9AM – 2PM | Sunday: Closed" },
                 ].map(({ icon: Icon, label, value, sub }) => (
                   <div key={label} className="flex items-start gap-4 p-4 rounded-xl border bg-card">
@@ -65,7 +65,7 @@ const ContactPage = () => (
             <div className="space-y-6">
               <div className="rounded-xl overflow-hidden border h-80 lg:h-96">
                 <iframe
-                  title="MenzTech Location"
+                  title="METES Location"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127065.99735495!2d-0.2630637!3d5.6037168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9084b2b7a773%3A0xbed14ed8650e2dd3!2sAccra%2C%20Ghana!5e0!3m2!1sen!2sgh!4v1700000000000!5m2!1sen!2sgh"
                   width="100%"
                   height="100%"
