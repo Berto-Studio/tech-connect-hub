@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink, Outlet, Link, useLocation } from "react-router-dom";
 import { LayoutDashboard, Package, FolderTree, Wrench, Layers, Home, LogOut, Menu } from "lucide-react";
-import logo from "@/assets/menz-tech-logo.png";
+import logo from "@/assets/metes-logo.png";
 import { useAuth } from "@/context/AuthContext";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
@@ -18,9 +18,8 @@ const navItems = [
 const SidebarContent = ({ onNavigate, signOut }: { onNavigate?: () => void; signOut: () => void }) => (
   <>
     <Link to="/" onClick={onNavigate} className="flex items-center gap-2 h-16 px-5 border-b">
-      <img src={logo} alt="MenzTech" className="h-8 w-8" />
+      <img src={logo} alt="METES" className="h-10 w-auto max-w-[8.5rem] object-contain" />
       <div>
-        <div className="font-display font-bold text-sm leading-none">MenzTech</div>
         <div className="text-[10px] text-muted-foreground mt-0.5">Admin panel</div>
       </div>
     </Link>

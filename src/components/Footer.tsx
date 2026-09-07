@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
-import logo from "@/assets/menz-tech-logo.png";
+import logo from "@/assets/metes-logo.png";
 import { WHATSAPP_NUMBER } from "@/data/products";
 
 const Footer = () => (
@@ -10,10 +10,7 @@ const Footer = () => (
         {/* Brand */}
         <div>
           <Link to="/" className="flex items-center gap-2 mb-4">
-            <img src={logo} alt="MenzTech" className="h-9 w-9" />
-            <span className="font-display text-xl font-bold text-dark-foreground">
-              Menz<span className="text-primary">Tech</span>
-            </span>
+            <img src={logo} alt="METES" className="h-14 w-auto max-w-[11rem] object-contain" />
           </Link>
           <p className="text-sm text-dark-foreground/50 leading-relaxed mb-4">
             Ghana's trusted provider of networking equipment, digital security, and electrical installation services.
@@ -86,7 +83,7 @@ const Footer = () => (
     <div className="border-t border-dark-foreground/10 py-6">
       <div className="container mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="text-xs text-dark-foreground/40">
-          © {new Date().getFullYear()} MenzTech. All rights reserved.
+          © {new Date().getFullYear()} METES. All rights reserved.
         </p>
         <div className="flex gap-6">
           <span className="text-xs text-dark-foreground/40">Privacy Policy</span>

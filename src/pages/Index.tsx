@@ -36,8 +36,8 @@ const whyChooseUs = [
 ];
 
 const testimonials = [
-  { name: "Kwame Asante", role: "CEO, Asante Logistics", text: "MenzTech transformed our office connectivity. Their team was professional, fast, and the network hasn't dropped once since installation.", rating: 5 },
-  { name: "Ama Darko", role: "Hotel Manager, Golden Palm", text: "Guests constantly compliment our WiFi now. MenzTech designed a system that handles hundreds of devices effortlessly.", rating: 5 },
+  { name: "Kwame Asante", role: "CEO, Asante Logistics", text: "METES transformed our office connectivity. Their team was professional, fast, and the network hasn't dropped once since installation.", rating: 5 },
+  { name: "Ama Darko", role: "Hotel Manager, Golden Palm", text: "Guests constantly compliment our WiFi now. METES designed a system that handles hundreds of devices effortlessly.", rating: 5 },
   { name: "Yaw Mensah", role: "IT Director, GreenField Corp", text: "The security audit they performed uncovered vulnerabilities we didn't know existed. Their expertise saved us from potential breaches.", rating: 5 },
 ];
 
@@ -110,13 +110,13 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div {...fadeUp}>
-              <img src={aboutImg} alt="MenzTech team at work" loading="lazy" width={800} height={600} className="rounded-2xl shadow-lg w-full object-cover" />
+              <img src={aboutImg} alt="METES team at work" loading="lazy" width={800} height={600} className="rounded-2xl shadow-lg w-full object-cover" />
             </motion.div>
             <motion.div {...fadeUp} transition={{ duration: 0.5, delay: 0.15 }}>
               <span className="text-sm font-semibold tracking-widest uppercase text-primary mb-2 block">Who We Are</span>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">Building Ghana's Digital Backbone</h2>
               <p className="text-muted-foreground mb-4 leading-relaxed">
-                MenzTech is a Ghanaian networking solutions company dedicated to bridging the connectivity gap. From homes to enterprises, we provide top-tier routers, modems, and networking equipment alongside expert installation and support services.
+                 METES is a Ghanaian technology and engineering company dedicated to bridging the connectivity gap. From homes to enterprises, we provide top-tier routers, modems, and networking equipment alongside expert installation and support services.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Founded with a passion for reliable connectivity, our certified team has served over 50 businesses and hundreds of households across Ghana. We don't just sell equipment — we design, install, and maintain networks that keep you connected.
@@ -207,7 +207,7 @@ const Index = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-sm font-semibold tracking-widest uppercase text-primary mb-2 block">The MenzTech Difference</span>
+             <span className="text-sm font-semibold tracking-widest uppercase text-primary mb-2 block">The METES Difference</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-3">Why Clients Trust Us</h2>
             <p className="text-muted-foreground max-w-md mx-auto">Here's what sets us apart from the competition.</p>
           </div>
@@ -299,7 +299,7 @@ const Index = () => {
       <section className="py-24 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
-            <span className="text-sm font-semibold tracking-widest uppercase text-primary mb-2 block">The People Behind MenzTech</span>
+             <span className="text-sm font-semibold tracking-widest uppercase text-primary mb-2 block">The People Behind METES</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-3">Meet Our Team</h2>
             <p className="text-muted-foreground max-w-md mx-auto">Passionate professionals committed to keeping Ghana connected.</p>
           </div>

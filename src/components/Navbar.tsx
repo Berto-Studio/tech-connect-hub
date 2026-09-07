@@ -12,7 +12,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logo from "@/assets/menz-tech-logo.png";
+import logo from "@/assets/metes-logo.png";
 import { useAuth } from "@/context/AuthContext";
 import { useCart } from "@/context/CartContext";
 
@@ -53,10 +53,7 @@ const Navbar = () => {
       {/* Main row */}
       <div className="container mx-auto px-4 h-16 flex items-center gap-4">
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <img src={logo} alt="Menz Tech" className="h-9 w-9" />
-          <span className="font-display text-xl font-bold tracking-tight text-foreground hidden sm:inline">
-            Menz<span className="text-primary">Tech</span>
-          </span>
+          <img src={logo} alt="METES" className="h-10 w-auto max-w-[9rem] object-contain" />
         </Link>
 
         {/* Search */}

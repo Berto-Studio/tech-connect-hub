@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import logo from "@/assets/menz-tech-logo.png";
+import logo from "@/assets/metes-logo.png";
 
 const schema = z.object({
   email: z.string().trim().email("Enter a valid email").max(255),
@@ -75,10 +75,7 @@ const AuthPage = () => {
     <div className="min-h-screen flex items-center justify-center bg-muted px-4">
       <div className="w-full max-w-md bg-background border rounded-2xl shadow-sm p-8">
         <Link to="/" className="flex items-center justify-center gap-2 mb-6">
-          <img src={logo} alt="MenzTech" className="h-10 w-10" />
-          <span className="font-display text-2xl font-bold">
-            Menz<span className="text-primary">Tech</span>
-          </span>
+          <img src={logo} alt="METES" className="h-16 w-auto max-w-[14rem] object-contain" />
         </Link>
         <h1 className="font-display text-2xl font-bold text-center mb-1">
           {mode === "signin" ? "Sign in to your account" : "Create your account"}
